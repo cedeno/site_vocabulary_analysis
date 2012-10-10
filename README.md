@@ -8,8 +8,9 @@ Here is an explanations of the wget options I used:
 - -w 2 says to wait for 2 seconds between each retrieval
 
 To run:
-	wget -r -l 3 -I 2012 -w 2 http://www.nytimes.com/most-popular
-	wget -r -l 3 -w 2 http://www.foxnews.com
+
+    wget -r -l 3 -I 2012 -w 2 http://www.nytimes.com/most-popular
+    wget -r -l 3 -w 2 http://www.foxnews.com
 
 You will now have a www.foxnews.com and www.nytimes.com directories.
 
@@ -19,11 +20,13 @@ we use 'lynx' to do this, a text-based web browser, so you may need to
 yum install lynx
 
 you need to direct output
-	$ ./iterate_fox.sh > FOX_OUT
+
+    $ ./iterate_fox.sh > FOX_OUT
 
 word_check.lua (requires lua) will read the words in and count individual
 words.  it discounts 'words' that have non-alpha characters in it.
 the output will be in csv format.  the word followed by a comma followed by
 the number of occurrences. you can import this into a spreadsheet.
-	$ ./word_check.lua < FOX_OUT > FOX_OUT.csv
+
+    $ ./word_check.lua < FOX_OUT > FOX_OUT.csv
 
